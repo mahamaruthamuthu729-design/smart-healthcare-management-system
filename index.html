@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Healthcare Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Smart Healthcare Management System</h1>
+        <p>Manage Patients, Doctors and Appointments</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#patients">Patients</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointment">Appointments</a>
+    </nav>
+
+    <section id="home" class="home">
+        <h2>Welcome to Smart Healthcare</h2>
+        <p>Simple and efficient healthcare management system.</p>
+    </section>
+
+    <section id="patients">
+        <h2>Patient Registration</h2>
+
+        <form id="patientForm">
+            <input type="text" id="patientName" placeholder="Patient Name" required>
+            <input type="number" id="patientAge" placeholder="Age" required>
+            <input type="text" id="patientDisease" placeholder="Disease" required>
+            <button type="submit">Add Patient</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Disease</th>
+                </tr>
+            </thead>
+            <tbody id="patientList"></tbody>
+        </table>
+    </section>
+
+    <section id="doctors">
+        <h2>Doctors</h2>
+
+        <div class="doctor-container">
+            <div class="card">
+                <h3>Dr. Arun</h3>
+                <p>Cardiologist</p>
+            </div>
+
+            <div class="card">
+                <h3>Dr. Priya</h3>
+                <p>Dermatologist</p>
+            </div>
+
+            <div class="card">
+                <h3>Dr. Kumar</h3>
+                <p>General Physician</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointment">
+        <h2>Book Appointment</h2>
+
+        <form id="appointmentForm">
+            <input type="text" id="appPatient" placeholder="Patient Name" required>
+
+            <select id="doctor" required>
+                <option value="">Select Doctor</option>
+                <option>Dr. Arun</option>
+                <option>Dr. Priya</option>
+                <option>Dr. Kumar</option>
+            </select>
+
+            <input type="date" id="date" required>
+            <button type="submit">Book Appointment</button>
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Smart Healthcare Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
